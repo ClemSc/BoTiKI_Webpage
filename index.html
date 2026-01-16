@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>BoTiKI</title>
+        <title>Landing Page - Start Bootstrap Theme</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -19,13 +19,29 @@
 
         <!-- Clem: I hided the default navigation bar, just uncomment to restore it if we needs it at some point -->
 
-        <!-- Navigation
+	<!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#!">Start Bootstrap</a>
                 <a class="btn btn-primary" href="#signup">Sign Up</a>
+		<select id='selectpicker' class='input' data-width='fit' onChange="toggleLang()">
+			<option lang='en' value="EN" data-content='<span class="flag-icon flag-icon-us"></span> English' selected="true"> EN </option>
+			<option lang='de' value="DE" data-content='<span class="flag-icon flag-icon-de"></span> German' > DE</option>
+			<option lang='fr' value="FR" data-content='<span class="flag-icon flag-icon-fr"></span> French' > FR</option>
+			<option lang='hi' value="HI" data-content='<span class="flag-icon flag-icon-in"></span> Hindi' > HI</option>
+		</select>
             </div>
-        </nav>-->
+        </nav>
+	<!-- 
+	  <div class="container-xl justify-content-center langPick">
+		<select id='selectpicker' class='input' data-width='fit' onChange="toggleLang()">
+			<option lang='en' value="EN" data-content='<span class="flag-icon flag-icon-us"></span> English' selected="true"> EN </option>
+			<option lang='de' value="DE" data-content='<span class="flag-icon flag-icon-de"></span> German' > DE</option>
+			<option lang='fr' value="FR" data-content='<span class="flag-icon flag-icon-fr"></span> French' > FR</option>
+			<option lang='hi' value="HI" data-content='<span class="flag-icon flag-icon-in"></span> Hindu' > HI</option>
+		</select>
+	  </div> -->
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
@@ -43,7 +59,7 @@
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
                              <!--<form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                <!-- Email address input
+			     <!-- Email address input 
                                 <div class="row">
                                     <div class="col">
                                         <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
@@ -51,7 +67,7 @@
                                         <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                                     </div>
                                     <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
-                                </div>-->
+                                </div> -->
                                 <!-- Submit success message-->
                                 <!---->
                                 <!-- This is what your users will see when the form-->
@@ -78,39 +94,32 @@
         <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">
-                <h2>Ein offenes KI-System zur Beschreibung von Bodenfauna-Gemeinschaften und seine Anwendung zur Verbesserung der Modellierung von Treibhausgasemissionen aus Böden</h2>
-            </div>
+			<div id="headtext_en" class="contentEN" style='display: block' > 
+				<div lang="en">
+				<h2>An open AI system for describing soil fauna communities and its application to improve the modelling of greenhouse gas emissions from soil</h2>
+				</div>
+			</div>
+			
+			<div id="headtext_de" class="contentDE" style='display: none' > 
+				<div lang="de">
+				<h2>Ein offenes KI-System zur Beschreibung von Bodenfauna-Gemeinschaften und seine Anwendung zur Verbesserung der Modellierung von Treibhausgasemissionen des Bodens</h2>
+				</div>
+			</div>
 
+			<div id="headtext_fr" class="contentFR" style='display: none' > 
+				<div lang="fr">
+				<h2>Système d'IA ouvert pour décrire les communautés faunistiques du sol et son application pour améliorer la modélisation des émissions de gaz à effet de serre provenant du sol </h2>
+				</div>
+			</div>
+
+			<div id="headtext_hi" class="contentHI" style='display: none' > 
+				<div lang="hi">
+				<h2> मिट्टी के जीव-समुदायों का वर्णन करने के लिए एक ओपन एआई प्रणाली और मिट्टी से हरितगृह गैस उत्सर्जन के मॉडलिंग में सुधार हेतु इसका अनुप्रयोग </h2>
+				</div>
+			</div>
+
+            </div>
             </section>
-
-                <!--
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
-                            <h3>Soil Biodiversity and Climate</h3>
-                            <p class="lead mb-0">In BoTiKI we study the relation between soil fauna and greenhouse gazes.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
-                            <h3>AI-supported workflow</h3>
-                            <p class="lead mb-0">We develop practical and open-source approaches to rapidly charaterize soil fauna communities.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
-                            <h3>Computer vision and DNA</h3>
-                            <p class="lead mb-0">Using computer vision, we count, classify and precisely estimate the biomass of tiny animals. Using high-throughput DNA approaches, we access their diversity at the genetic level.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        --!>
         </section>
 
         <!-- Image Showcases-->
@@ -118,21 +127,64 @@
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
-                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text" >
 
-                    <h2>Bodenbiodiversität und Klima</h2>
-                    <p class="lead mb-0">Böden bilden die Grundlage terrestrischer Ökosysteme. Sie erbringen wesentliche Ökosystemleistungen wie die Kontrolle von Pathogenen, die Nahrungsmittelproduktion und vieles mehr. Bodenprozesse führen zur Speicherung oder Freisetzung potenter Treibhausgase (THG): CO₂, N₂O und CH₄. Das Bodenmikrobiom (Pilze und Bakterien) gilt als der Haupttreiber der Produktion dieser Gase, die als Nebenprodukte seiner Aktivität entstehen.
+		      <div class="contentEN" lang='en' style='display: block'>
+                        <h2>Soil Biodiversity and Climate</h2>
+                        <p class="lead mb-0">Soils are the foundation of terrestrial ecosystems. They provide essential ecosystem services such as the control of pathogens, food production, and more. Soil functioning leads to the storage or release of potent greenhouse gases (GHGs): CO₂, N₂O, and CH₄. The soil microbiome (fungi and bacteria) is considered the main driver of the production of these gases, which arise as by-products of its activity.
 
-                    Die Aktivität des Mikrobioms wird durch die Mikro- und Mesofauna reguliert: kleine Wirbellose, die sich entweder direkt von Mikroorganismen ernähren oder abgestorbenes organisches Material konsumieren. Im BoTiKI-Projekt wollen wir die Rolle der Bodenfauna entschlüsseln und ihren Wert als Indikator für THG-Flüsse aus Böden untersuchen.</p>
-                    </div>
+                        The activity of the microbiome is regulated by the micro- and mesofauna: small invertebrates that either feed directly on microorganisms or consume dead organic matter. In the BoTiKI project, we aim to decipher the role of soil fauna and investigate its value as an indicator of GHG fluxes from soils.</p>
+                    	</div>
+
+		      <div class="contentDE" lang='de' style='display: none'>
+                        <h2>Boden-Biodiversität und das Klima </h2>
+                        <p class="lead mb-0">
+			Böden sind die Grundlage terrestrischer Ökosysteme. Sie erbringen wichtige Ökosystemleistungen wie die Bekämpfung von Krankheitserregern, die Nahrungsmittelproduktion und vieles mehr. Die Bodenfunktion führt zur Speicherung oder Freisetzung starker Treibhausgase (THG): CO₂, N₂O und CH₄. Das Bodenmikrobiom (Pilze und Bakterien) gilt als Haupttreiber für die Produktion dieser Gase, die als Nebenprodukte seiner Aktivität entstehen. Die Aktivität des Mikrobioms wird durch die Mikro- und Mesofauna reguliert: kleine Wirbellose, die sich entweder direkt von Mikroorganismen ernähren oder tote organische Stoffe verzehren. Im BoTiKI-Projekt wollen wir die Rolle der Bodenfauna entschlüsseln und ihren Wert als Indikator für Treibhausgasflüsse aus Böden untersuchen.
+                    	</div>
+
+
+		      <div class="contentFR" lang='fr' style='display: none'>
+                        <h2> Biodiversité des sols et climat </h2>
+                        <p class="lead mb-0">
+			      Les sols constituent le fondement des écosystèmes terrestres. Ils fournissent des services écosystémiques essentiels tels que le contrôle des agents pathogènes, la production alimentaire, etc. Le fonctionnement des sols entraîne le stockage ou le rejet de puissants gaz à effet de serre (GES) : CO₂, N₂O et CH₄. Le microbiome du sol (champignons et bactéries) est considéré comme le principal moteur de la production de ces gaz, qui sont des sous-produits de son activité. L'activité du microbiome est régulée par la microfaune et la mésofaune : de petits invertébrés qui se nourrissent directement de micro-organismes ou consomment des matières organiques mortes. Dans le cadre du projet BoTiKI, nous cherchons à déchiffrer le rôle de la faune du sol et à étudier son intérêt en tant qu'indicateur des flux de GES provenant des sols.
+                    	</div>
+
+		      <div class="contentHI" lang='hi' style='display: none'>
+                        <h2> मृदा जैव विविधता और जलवायु</h2>
+                        <p class="lead mb-0"> मिट्टी स्थलीय पारिस्थितिक तंत्रों की नींव है। यह रोगजनकों से लड़ने, खाद्य उत्पादन और भी बहुत कुछ जैसी महत्वपूर्ण पारिस्थितिकी तंत्र सेवाएँ प्रदान करती है। मिट्टी का कार्य शक्तिशाली हरितगृह गैसों (GHGs): CO₂, N₂O और CH₄ के भंडारण या विमोचन की ओर ले जाता है। मिट्टी माइक्रोबायोम (फफूंद और बैक्टीरिया) को इन गैसों के उत्पादन का मुख्य चालक माना जाता है, जो इसकी गतिविधि के उप-उत्पाद हैं। माइक्रोबायोम की गतिविधि का विनियमन माइक्रो- और मेसोफ़ाउना द्वारा किया जाता है: छोटे कशेरुकहीन जीव जो या तो सीधे सूक्ष्मजीवों को खाते हैं या मृत कार्बनिक पदार्थ का उपभोग करते हैं। BoTiKI परियोजना में, हमारा लक्ष्य मृदा जीव-जंतुओं की भूमिका को समझना और मृदा से हरितगृह गैस प्रवाह के संकेतक के रूप में इसके मूल्य की जांच करना है। </p>
+                    	</div>
+
+		     </div>
+
                 </div>
                 <div class="row g-0">
                     <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
                     <div class="col-lg-6 my-auto showcase-text">
-                        <h2>KI-gestützter Workflow</h2>
-                        <p class="lead mb-0">Die Analyse von Bodenfauna-Proben in Flüssigkeit ist eine zeitaufwendige Aufgabe. Wir entwickeln einen optimierten Computer-Vision-Workflow, der es ermöglicht, Sammelröhrchen voller Exemplare effizient zu digitalisieren. Ziel ist eine erschwingliche, skalierbare und quelloffene Lösung, die praxisnah gestaltet ist und sich nahtlos in die üblichen Arbeitsabläufe der Bodenzoologie integrieren lässt.
-                        </p>
-                    </div>
+
+		      <div class="contentEN" lang='en' style='display: block'>
+				<h2>AI-supported workflow</h2>
+				<p class="lead mb-0">Analysing samples of soil fauna in fluid is a time consuming task. We are developing a streamlined computer-vision workflow allowing to digitize efficiently collection tubes full of specimens. We are aiming at an affordable, scalable and open-source solution, crafted to be convenient and integrated in the usual soil zoology practices.
+				</p>
+			</div>
+                    
+		      <div class="contentDE" lang='de' style='display: none'>
+				<h2> KI-unterstützter Arbeitsablauf </h2>
+				<p class="lead mb-0"> Die Analyse von Bodenfauna-Proben in Flüssigkeit ist eine zeitaufwändige Aufgabe. Wir entwickeln einen optimierten Computer-Vision-Workflow, mit dem sich Probenröhrchen voller Exemplare effizient digitalisieren lassen. Unser Ziel ist eine kostengünstige, skalierbare und quelloffene Lösung, die benutzerfreundlich ist und sich in die üblichen Verfahren der Bodenzoologie integrieren lässt. </p>
+				</p>
+			</div>
+                    
+		      <div class="contentFR" lang='fr' style='display: none'>
+				<h2>Flux de travail assisté par l'IA  </h2>
+				<p class="lead mb-0"> L'analyse d'échantillons de faune du sol dans un liquide est une tâche fastidieuse. Nous développons actuellement un processus simplifié de vision par ordinateur permettant de numériser efficacement des tubes de collecte remplis de spécimens. Nous visons une solution abordable, évolutive et open source, conçue pour être pratique et s'intégrer dans les pratiques habituelles de la zoologie des sols. </p>
+			</div>
+                    
+		      <div class="contentHI" lang='hi' style='display: none'>
+				<h2>एआई-समर्थित कार्यप्रवाह  </h2>
+				<p class="lead mb-0"> तरल में मिट्टी के जीव-जंतुओं के नमूनों का विश्लेषण एक समय-साध्य कार्य है। हम एक सुव्यवस्थित कंप्यूटर-विज़न वर्कफ़्लो विकसित कर रहे हैं, जो नमूनों से भरी संग्रह ट्यूबों को कुशलतापूर्वक डिजिटाइज़ करने की अनुमति देता है। हमारा लक्ष्य एक किफायती, स्केलेबल और ओपन-सोर्स समाधान तैयार करना है, जिसे मिट्टी की सामान्य प्राणीशास्त्र प्रथाओं में सुविधाजनक और एकीकृत किया जा सके।     
+				</p>
+			</div>
+                    
+		    </div>
                 </div>
                 <div class="row g-0">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img video-bg">
@@ -141,8 +193,26 @@
                     </video>
                     </div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Computer Vision und DNA</h2>
-                        <p class="lead mb-0">Mithilfe von Computer Vision zählen, klassifizieren und schätzen wir die Biomasse winziger Tiere präzise. Mit Hochdurchsatz-DNA-Methoden erfassen wir ihre Diversität auf genetischer Ebene. Unsere Röhrchen-zu-Röhrchen-Pipeline macht das Design flexibel. Eine Taxonomin bzw. ein Taxonom kann die Fänge digitalisieren und die Individuen sicher für eine eingehende Untersuchung zurückgewinnen; eine Ökologin bzw. ein Ökologe kann die Ergebnisse direkt nutzen; die zurückgewonnene Probe ist bereit für die Aufnahme in eine Sammlung oder kann für die Verarbeitung im molekularbiologischen Labor verwendet werden.</p>
+                    
+		      <div class="contentEN" lang='en' style='display: block'>
+                        <h2>Computer vision and DNA</h2>
+                        <p class="lead mb-0">Using computer vision, we count, classify and precisely estimate the biomass of tiny animals. Using high-throughput DNA approaches, we access their diversity at the genetic level. Our tube to tube pipeline makes our design flexible. A taxonomist can digitize its catches and safely recover the individuals for through inspection, an ecologist can use the results directly, the recover sample is ready for being put in collection, or can be used for processing in the molecular lab.</p>
+                    	</div>
+
+		      <div class="contentDE" lang='de' style='display: none'>
+                        <h2> Industrielle Bildverarbeitung und DNA </h2>
+                        <p class="lead mb-0">Mithilfe von Bildverarbeitung zählen, klassifizieren und schätzen wir präzise die Biomasse winziger Tiere. Mit Hilfe von Hochdurchsatz-DNA-Verfahren ermitteln wir ihre Vielfalt auf genetischer Ebene. Unsere „Tube-to-Tube”-Pipeline macht unser Design flexibel. Ein Taxonom kann seine Fänge digitalisieren und die Individuen sicher für eine gründliche Untersuchung wiederherstellen, ein Ökologe kann die Ergebnisse direkt nutzen, die wiederhergestellte Probe kann in die Sammlung aufgenommen oder für die Verarbeitung im Molekularlabor verwendet werden.  </p>
+                    	</div>
+
+		      <div class="contentFR" lang='fr' style='display: none'>
+                        <h2>Vision par ordinateur et ADN </h2>
+                        <p class="lead mb-0"> Grâce à la vision par ordinateur, nous comptons, classons et estimons avec précision la biomasse de minuscules animaux. À l'aide d'approches ADN à haut débit, nous évaluons leur diversité au niveau génétique. Notre pipeline tube à tube rend notre conception flexible. Un taxonomiste peut numériser ses captures et récupérer les individus en toute sécurité pour les inspecter, un écologiste peut utiliser directement les résultats, l'échantillon récupéré est prêt à être ajouté à la collection ou peut être utilisé pour être traité dans le laboratoire moléculaire. </p>
+                    	</div>
+
+		      <div class="contentHI" lang='hi' style='display: none'>
+                        <h2>कंप्यूटर दृष्टि और डीएनए </h2>
+                        <p class="lead mb-0">कंप्यूटर विज़न का उपयोग करके, हम सूक्ष्म जानवरों की गिनती, वर्गीकरण और उनके जैव द्रव्यमान का सटीक अनुमान लगाते हैं। उच्च-प्रवाह डीएनए विधियों का उपयोग करके, हम उनकी आनुवंशिक स्तर पर विविधता का अध्ययन करते हैं। हमारी ट्यूब-टू-ट्यूब पाइपलाइन हमारे डिज़ाइन को लचीला बनाती है। एक वर्गीकरण विज्ञानी अपने संग्रहित नमूनों को डिजिटाइज़ कर सकता है और निरीक्षण के लिए व्यक्तियों को सुरक्षित रूप से पुनः प्राप्त कर सकता है, एक पारिस्थितिकी विज्ञानी सीधे परिणामों का उपयोग कर सकता है, पुनः प्राप्त नमूना संग्रह में रखने के लिए तैयार होता है, या आणविक प्रयोगशाला में प्रसंस्करण के लिए इस्तेमाल किया जा सकता है।  </p>
+                    	</div>
                     </div>
                 </div>
             </div>
@@ -163,19 +233,19 @@
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="assets/img/A_Seeliger.jpg" alt="..." />
                             <h5>Dr.-Ing. André Seeliger</h5>
-                            <p class="font-weight-light mb-0">"Project leader (HSZG), computer vision"</p>
+                            <p class="font-weight-light mb-0">"Project leader (HSZG), [...]"</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="assets/img/F_Zacharias.jpg" alt="..." />
                             <h5>Frank Zacharias</h5>
-                            <p class="font-weight-light mb-0">Fachtechniker, computer vision</p>
+                            <p class="font-weight-light mb-0">, [...]</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/N_Prakash.jfif" alt="..." />
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/rhyno.png" alt="..." />
                             <h5>Dr Navya Prakash</h5>
                             <p class="font-weight-light mb-0">Post-doctorant (SNG)</p>
                             </div>
@@ -189,14 +259,14 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/Arved.JPG" alt="..." />
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/rhyno.png" alt="..." />
                             <h5>Arved Flemming</h5>
                             <p class="font-weight-light mb-0">Student assistant (SGN), soil zoology</p>
                             </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/Mahima-profile-photo-squared.jpeg" alt="..." />
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/rhyno.png" alt="..." />
                             <h5>Mahima Patel</h5>
                             <p class="font-weight-light mb-0">Student assistant (SGN), soil zoology</p>
                             </div>
