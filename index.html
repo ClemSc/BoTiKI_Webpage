@@ -22,11 +22,13 @@
 	<!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <a class="btn btn-primary" href="#signup">Sign Up</a>
+                <!--<a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <a class="btn btn-primary" href="#signup">Sign Up</a>-->
+
+
 		<select id='selectpicker' class='input' data-width='fit' onChange="toggleLang()">
-			<option lang='en' value="EN" data-content='<span class="flag-icon flag-icon-us"></span> English' selected="true"> EN </option>
-			<option lang='de' value="DE" data-content='<span class="flag-icon flag-icon-de"></span> German' > DE</option>
+            <option lang='de' value="DE" data-content='<span class="flag-icon flag-icon-de"></span> German' selected="true"> DE</option>
+			<option lang='en' value="EN" data-content='<span class="flag-icon flag-icon-us"></span> English' > EN </option>
 			<option lang='fr' value="FR" data-content='<span class="flag-icon flag-icon-fr"></span> French' > FR</option>
 			<option lang='hi' value="HI" data-content='<span class="flag-icon flag-icon-in"></span> Hindi' > HI</option>
 		</select>
@@ -94,13 +96,13 @@
         <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">
-			<div id="headtext_en" class="contentEN" style='display: block' > 
+			<div id="headtext_en" class="contentEN" style='display: none' >
 				<div lang="en">
 				<h2>An open AI system for describing soil fauna communities and its application to improve the modelling of greenhouse gas emissions from soil</h2>
 				</div>
 			</div>
 			
-			<div id="headtext_de" class="contentDE" style='display: none' > 
+			<div id="headtext_de" class="contentDE" style='display: block' >
 				<div lang="de">
 				<h2>Ein offenes KI-System zur Beschreibung von Bodenfauna-Gemeinschaften und seine Anwendung zur Verbesserung der Modellierung von Treibhausgasemissionen des Bodens</h2>
 				</div>
@@ -129,14 +131,14 @@
                     <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text" >
 
-		      <div class="contentEN" lang='en' style='display: block'>
+		      <div class="contentEN" lang='en' style='display: none'>
                         <h2>Soil Biodiversity and Climate</h2>
                         <p class="lead mb-0">Soils are the foundation of terrestrial ecosystems. They provide essential ecosystem services such as the control of pathogens, food production, and more. Soil functioning leads to the storage or release of potent greenhouse gases (GHGs): CO₂, N₂O, and CH₄. The soil microbiome (fungi and bacteria) is considered the main driver of the production of these gases, which arise as by-products of its activity.
 
                         The activity of the microbiome is regulated by the micro- and mesofauna: small invertebrates that either feed directly on microorganisms or consume dead organic matter. In the BoTiKI project, we aim to decipher the role of soil fauna and investigate its value as an indicator of GHG fluxes from soils.</p>
                     	</div>
 
-		      <div class="contentDE" lang='de' style='display: none'>
+		      <div class="contentDE" lang='de' style='display: block'>
                         <h2>Boden-Biodiversität und das Klima </h2>
                         <p class="lead mb-0">
 			Böden sind die Grundlage terrestrischer Ökosysteme. Sie erbringen wichtige Ökosystemleistungen wie die Bekämpfung von Krankheitserregern, die Nahrungsmittelproduktion und vieles mehr. Die Bodenfunktion führt zur Speicherung oder Freisetzung starker Treibhausgase (THG): CO₂, N₂O und CH₄. Das Bodenmikrobiom (Pilze und Bakterien) gilt als Haupttreiber für die Produktion dieser Gase, die als Nebenprodukte seiner Aktivität entstehen. Die Aktivität des Mikrobioms wird durch die Mikro- und Mesofauna reguliert: kleine Wirbellose, die sich entweder direkt von Mikroorganismen ernähren oder tote organische Stoffe verzehren. Im BoTiKI-Projekt wollen wir die Rolle der Bodenfauna entschlüsseln und ihren Wert als Indikator für Treibhausgasflüsse aus Böden untersuchen.
@@ -161,13 +163,13 @@
                     <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
                     <div class="col-lg-6 my-auto showcase-text">
 
-		      <div class="contentEN" lang='en' style='display: block'>
+		      <div class="contentEN" lang='en' style='display: none'>
 				<h2>AI-supported workflow</h2>
 				<p class="lead mb-0">Analysing samples of soil fauna in fluid is a time consuming task. We are developing a streamlined computer-vision workflow allowing to digitize efficiently collection tubes full of specimens. We are aiming at an affordable, scalable and open-source solution, crafted to be convenient and integrated in the usual soil zoology practices.
 				</p>
 			</div>
                     
-		      <div class="contentDE" lang='de' style='display: none'>
+		      <div class="contentDE" lang='de' style='display: block'>
 				<h2> KI-unterstützter Arbeitsablauf </h2>
 				<p class="lead mb-0"> Die Analyse von Bodenfauna-Proben in Flüssigkeit ist eine zeitaufwändige Aufgabe. Wir entwickeln einen optimierten Computer-Vision-Workflow, mit dem sich Probenröhrchen voller Exemplare effizient digitalisieren lassen. Unser Ziel ist eine kostengünstige, skalierbare und quelloffene Lösung, die benutzerfreundlich ist und sich in die üblichen Verfahren der Bodenzoologie integrieren lässt. </p>
 				</p>
@@ -194,12 +196,12 @@
                     </div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                     
-		      <div class="contentEN" lang='en' style='display: block'>
+		      <div class="contentEN" lang='en' style='display: none'>
                         <h2>Computer vision and DNA</h2>
                         <p class="lead mb-0">Using computer vision, we count, classify and precisely estimate the biomass of tiny animals. Using high-throughput DNA approaches, we access their diversity at the genetic level. Our tube to tube pipeline makes our design flexible. A taxonomist can digitize its catches and safely recover the individuals for through inspection, an ecologist can use the results directly, the recover sample is ready for being put in collection, or can be used for processing in the molecular lab.</p>
                     	</div>
 
-		      <div class="contentDE" lang='de' style='display: none'>
+		      <div class="contentDE" lang='de' style='display: block'>
                         <h2> Industrielle Bildverarbeitung und DNA </h2>
                         <p class="lead mb-0">Mithilfe von Bildverarbeitung zählen, klassifizieren und schätzen wir präzise die Biomasse winziger Tiere. Mit Hilfe von Hochdurchsatz-DNA-Verfahren ermitteln wir ihre Vielfalt auf genetischer Ebene. Unsere „Tube-to-Tube”-Pipeline macht unser Design flexibel. Ein Taxonom kann seine Fänge digitalisieren und die Individuen sicher für eine gründliche Untersuchung wiederherstellen, ein Ökologe kann die Ergebnisse direkt nutzen, die wiederhergestellte Probe kann in die Sammlung aufgenommen oder für die Verarbeitung im Molekularlabor verwendet werden.  </p>
                     	</div>
@@ -233,21 +235,21 @@
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="assets/img/A_Seeliger.jpg" alt="..." />
                             <h5>Dr.-Ing. André Seeliger</h5>
-                            <p class="font-weight-light mb-0">"Project leader (HSZG), [...]"</p>
+                            <p class="font-weight-light mb-0">Project leader (HSZG), computer vision</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="assets/img/F_Zacharias.jpg" alt="..." />
                             <h5>Frank Zacharias</h5>
-                            <p class="font-weight-light mb-0">, [...]</p>
+                            <p class="font-weight-light mb-0">Labortechniker (HSZG), computer vision</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/rhyno.png" alt="..." />
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/N_Prakash.jfif" alt="..." />
                             <h5>Dr Navya Prakash</h5>
-                            <p class="font-weight-light mb-0">Post-doctorant (SNG)</p>
+                            <p class="font-weight-light mb-0">Post-doctorant (SNG), computer vision and modelling</p>
                             </div>
                     </div>
                     <div class="col-lg-4">
@@ -259,14 +261,14 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/rhyno.png" alt="..." />
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/Arved.JPG" alt="..." />
                             <h5>Arved Flemming</h5>
                             <p class="font-weight-light mb-0">Student assistant (SGN), soil zoology</p>
                             </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/rhyno.png" alt="..." />
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/Mahima-profile-photo-squared.jpeg" alt="..." />
                             <h5>Mahima Patel</h5>
                             <p class="font-weight-light mb-0">Student assistant (SGN), soil zoology</p>
                             </div>

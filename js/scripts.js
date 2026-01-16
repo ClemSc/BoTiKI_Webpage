@@ -25,7 +25,7 @@ function toggleLang() {
   };
 
   Object.keys(containers).forEach((lang) => {
-    containers[lang].forEach((container) => {
+    Array.from(containers[lang]).forEach((container) => {
       container.style.display = lang === use_lang ? "block" : "none";
     });
   });
